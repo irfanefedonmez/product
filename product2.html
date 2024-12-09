@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport">
     <title>Soccer Boots</title>
     <link rel="icon" href="!favicon.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-       
-    </style>
+    <script src="product.js"></script>
 </head>
 <body>
     <h1 class="header">BBFS</h1>
+    
 
-    <!-- Dükkan görseli -->
+
+    <!--Navigation-->
+    <div class="navi" style="background-color: wheat;padding: 10px;border-radius: 10px;">
+
+        <a href="#mostsellers" style="margin-right: 10px;">Best Sellers</a>
+        <a href="#suggestions" style="margin-right: 10px;">Suggestions</a>
+        <a href="#contact">Contact Us</a>
+        
+    </div>
+
+
+    <!-- Shop Image -->
     <div class="shopimage">
         <img src="!shop.jpg" alt="shop" style="margin-top: 50px;">
     </div>
@@ -22,7 +32,7 @@
 
     <hr style="height: 50px; background-color: black;">
 
-    <div class="image-container">
+    <div class="bodyimages" id="mostsellers">
         <div class="image-wrapper">
             <img src="!adidasboots.jpg.webp" alt="adidas boots" class="boot-image">
             <div class="price-tag">$159.99</div>
@@ -42,10 +52,10 @@
         </a>
     </div>
 
-    <hr style="height: 50px; background-color: black;">
+    <hr style="height: 50px; background-color: black; margin-bottom: 0px;">
 
-    <!-- Ürün Önerileri Bölümü -->
-    <section class="suggestions">
+    <!-- Suggestions -->
+    <section class="suggestions" id="suggestions">
         <h2>You May Also Like</h2>
         <div class="suggestion-items">
             <div class="suggestion-item">
@@ -67,7 +77,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>ANY SUGGESTIONS</h2>
         <form id="contact-form">
             <label for="name">Your Name</label>
@@ -79,7 +89,7 @@
             <label for="message">Your Message</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit" style="background-color: black; color: white;">Send Message</button>
+            <button type="button" style="background-color: black; color: white;" onclick="welcome()">Send Message</button>
         </form>
     </section>
 

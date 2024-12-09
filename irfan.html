@@ -3,10 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nike Boots</title>
+    <link rel="icon" href="!favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(245, 230, 203);
+            margin: 0;
+            padding: 0;
+        }
+
+        #video {
+            margin-bottom: 20px;
+            width: 50%;
+            border-radius: 20px;
+        }
+
+        #images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .boot-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .boot-image:hover {
+            transform: scale(4.1);
+        }
+
+        #sizes {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        #sizes button {
+            background-color: #fa8f89;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #sizes button:hover {
+            background-color: #ff2a16;
+            transform: scale(1.1);
+        }
+
+        .price-tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0px 0px 4px black;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .price-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px;
+            background-color: red;
+        }
+
+        #selected-size {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #total-price {
+            margin-top: 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: green;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 1.1em;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    
-    <video src="!!ronaldovideo.mp4" controls autoplay loop></video>
+    <video src="!!ronaldovideo.mp4" loop muted id="video" autoplay controls></video>
+
+    <div id="images">
+        <img id="img0" src="in0.png" class="boot-image" alt="Image 0">
+        <img id="img1" src="in1.png" class="boot-image" alt="Image 1">
+        <img id="img2" src="in2.png" class="boot-image" alt="Image 2">
+        <img id="img3" src="in3.png" class="boot-image" alt="Image 3">
+        <img id="img4" src="in4.png" class="boot-image" alt="Image 4">
+        <img id="img5" src="in5.png" class="boot-image" alt="Image 5">
+    </div>
+
+    <div id="sizes">
+        <button onclick="selectSize(40)">40</button>
+        <button onclick="selectSize(41)">41</button>
+        <button onclick="selectSize(42)">42</button>
+        <button onclick="selectSize(43)">43</button>
+        <button onclick="selectSize(44)">44</button>
+        <button onclick="selectSize(45)">45</button>
+    </div>
+
+    <button class="price-tag" onclick="checkout()">$199.99</button>
+
+    <!-- Section to display selected size and calculate total price -->
+    <div id="selected-size"></div>
+    <div id="total-price"></div>
+
+    <footer>
+        <p>&copy; 2024 Soccer Boots. All Rights Reserved. </p>
+    </footer>
+
+    <script>
+        function selectSize(size) {
+            document.getElementById('selected-size').textContent = `Selected Size: ${size}`;
+        }
+    </script>
+
+    <script>
+        function checkout()
+        {
+            window.alert('Proceeding to checkout!');
+        }
+    </script>
+
 </body>
 </html>
