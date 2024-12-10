@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black; 
+    margin: 0;
+    padding: 0;
+}
+
+
+#sale-banner {
+    background-color: red;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#video {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 50%;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+
+#images {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.boot-image {
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid black; 
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.boot-image:hover {
+    transform: scale(1.1);
+}
+
+
+#left-images, #right-images {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    top: 100px;
+    width: 20%;
+    z-index: 500;
+}
+
+#left-images {
+    left: 0;
+}
+
+#right-images {
+    right: 0;
+}
+
+#sizes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+#sizes button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#sizes button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.price-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 60px;
+    box-shadow: 0px 0px 4px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.price-tag:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px;
+    background-color: red;
+}
+
+#selected-size {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+#total-price {
+    margin-top: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: green;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 50px;
+}
