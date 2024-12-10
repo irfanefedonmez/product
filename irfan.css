@@ -201,3 +201,50 @@ footer {
 .home-button:hover {
     transform: scale(1.1);
 }
+
+#product-info {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+#product-info h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#product-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#product-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#product-info ul li {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#product-info ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
